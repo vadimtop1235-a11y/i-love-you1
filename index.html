@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Открой до конца</title>
+<style>
+  body {
+    text-align: center;
+    font-family: Arial;
+    background: black;
+    color: white;
+    margin-top: 120px;
+  }
+  h1 {
+    font-size: 28px;
+    max-width: 500px;
+    margin: auto;
+    line-height: 1.6;
+  }
+  button {
+    padding: 15px 35px;
+    font-size: 18px;
+    margin: 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  #yes {
+    background: #22c55e;
+  }
+  #no {
+    background: #ef4444;
+    position: absolute;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>
+Я мог бы сейчас играть в игры…<br><br>
+но не хочу<br><br>
+ты мне реально стала ближе, чем многие<br>
+и я не собираюсь это обесценивать<br><br>
+я тебя люблю<br><br>
+и ты это уже чувствуешь…<br><br>
+просто скажи честно 👇
+</h1>
+
+<button id="yes" onclick="yes()">Да</button> <button id="no" onmouseover="move()">Нет</button>
+
+<script>
+function yes() {
+  document.body.innerHTML = "<h1>Вот и всё 🖤<br><br>значит мы на одном уровне<br>и дальше будет только сильнее</h1>";
+}
+
+function move() {
+  const btn = document.getElementById("no");
+  btn.style.top = Math.random() * window.innerHeight + "px";
+  btn.style.left = Math.random() * window.innerWidth + "px";
+}
+</script>
+
+</body>
+</html>
